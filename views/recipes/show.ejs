@@ -1,0 +1,15 @@
+<%- include('../partials/_navbar.ejs') %>
+
+<h1><%= recipe.name %></h1>
+
+<h2>Ingredients</h2>
+<ul>
+  <% recipe.ingredients.forEach(ingredient => { %>
+    <li><%= ingredient.name %></li>
+  <% }) %>
+</ul>
+
+<h2>Instructions</h2>
+<p><%= recipe.instructions %></p>
+
+<a href="/recipes">Back to Recipes</a>
