@@ -1,0 +1,17 @@
+<%- include('../partials/_navbar.ejs') %>
+
+<h1>Explore Our Community</h1>
+
+<% if (users.length > 0) { %>
+  <ul>
+    <% for(const user of users) { %>
+      <li>
+        <a href="#">
+          <%= user.username %>
+        </a>
+      </li>
+    <% } %>
+  </ul>
+<% } else { %>
+  <p>No users to display.</p>
+<% } %>
