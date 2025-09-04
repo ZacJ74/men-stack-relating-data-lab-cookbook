@@ -1,0 +1,19 @@
+<%- include('../partials/_navbar.ejs') %>
+
+<h1><%= user.username %>'s Recipes</h1>
+
+<% if (recipes.length > 0) { %>
+  <ul>
+    <% recipes.forEach(recipe => { %>
+      <li>
+        <a href="/recipes/<%= recipe._id %>">
+          <%= recipe.name %>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+<% } else { %>
+  <p>This user has not created any recipes yet.</p>
+<% } %>
+
+<a href="/users">Back to Community</a>

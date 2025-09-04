@@ -6,7 +6,7 @@
   <ul>
     <% for(const user of users) { %>
       <li>
-        <a href="#">
+        <a href="/users/<%= user._id %>">
           <%= user.username %>
         </a>
       </li>
